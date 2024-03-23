@@ -1,0 +1,29 @@
+<h1>Login</h1>
+
+<!-- <% if (messages.error) { %>
+<div><strong> <% messages.error %></strong></div>
+<% } %> -->
+
+<% if (messages.error) { %>
+<div class="alert alert-danger">
+	<strong><%= messages.error %> </strong>
+</div>
+<% } %>
+<form action="/login" method="POST">
+	<div><strong> (messages.error ) </strong></div>
+
+	<input type="email" placeholder="email" name="email" id="form3Example3" />
+	<br />
+	<input
+		type="password"
+		name="password"
+		placeholder="password"
+		id="form3Example4"
+	/>
+	<br />
+	<button type="submit">Sign in</button>
+</form>
+
+<span>Dont have an account?</span>
+
+<button><a href="/register">Register</a></button>
